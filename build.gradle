@@ -10,3 +10,5 @@ dependencies {
         "junit:junit:4.11",
     )
 }
+
+project.tasks.find { "eclipse".equals(it.name) }.dependsOn("cleanEclipse")
