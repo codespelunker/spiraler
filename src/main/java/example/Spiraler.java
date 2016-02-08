@@ -28,9 +28,6 @@ public class Spiraler {
 
     private List<Integer> crawlOuterLoop(int[][] multi, int startx, int starty, int maxx, int maxy) {
         List<Integer> list = new ArrayList<>();
-        if (multi[starty].length == 0) {
-            return list;
-        }
 
         // across
         for (int x = startx; x <= maxx; x++) {

@@ -13,7 +13,15 @@ import org.junit.Test;
 public class TestSpiraler {
 
     @Test
-    public void shouldByEmptyForAnEmptyMatrix() {
+    public void shouldBeEmptyForAnNullInput() {
+        Spiraler spiraler = new Spiraler();
+        List<Integer> actual = spiraler.spiral(null);
+
+        assertEquals(new ArrayList<Integer>(), actual);
+    }
+
+    @Test
+    public void shouldBeEmptyForAnEmptyMatrix() {
         int[][] multi = new int[0][0];
         Spiraler spiraler = new Spiraler();
         List<Integer> actual = spiraler.spiral(multi);
